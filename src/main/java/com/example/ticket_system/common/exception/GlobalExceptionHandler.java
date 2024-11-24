@@ -1,4 +1,4 @@
-package com.example.ticket_system;
+package com.example.ticket_system.common.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

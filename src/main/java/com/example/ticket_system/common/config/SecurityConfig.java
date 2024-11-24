@@ -1,4 +1,4 @@
-package com.example.ticket_system.config;
+package com.example.ticket_system.common.config;
 
 import com.example.ticket_system.CustomAuthenticationSuccessHandler;
 import org.springframework.context.annotation.Bean;
