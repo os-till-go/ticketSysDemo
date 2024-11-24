@@ -2,8 +2,8 @@ package com.example.ticket_system.service;
 
 import com.example.ticket_system.model.Order;
 import org.springframework.stereotype.Service;
-import com.example.ticket_system.order.OrderRepository;
-import com.example.ticket_system.ticket.TicketRepository;
+import com.example.ticket_system.module.order.OrderRepository;
+import com.example.ticket_system.module.ticket.TicketRepository;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;

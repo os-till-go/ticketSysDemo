@@ -1,3 +1,10 @@
+export interface User {
+    id: number
+    name: string
+    email: string
+    password: string
+    role: 'user' | 'admin'
+}
 export interface Ticket {
     id: number
     route: string

@@ -1,4 +1,4 @@
-package com.example.ticket_system.user;
+package com.example.ticket_system.module.user.dto;
 
 import lombok.Data;
 

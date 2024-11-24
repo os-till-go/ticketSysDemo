@@ -1,21 +1,25 @@
-package com.example.ticket_system.user;
+package com.example.ticket_system.module.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import com.example.ticket_system.model.User;
-import java.util.List;
+import org.springframework.stereotype.Repository;
 
+import java.util.List;
+import java.util.Optional;
+
+@Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
     // 根据用户名查询用户，由Spring Data JPA根据方法名自动生成查询语句
-    User findByUsername(String username);
+    Optional<User> findByUsername(String username);
 
     // 根据邮箱查询用户，同样由Spring Data JPA自动生成查询语句
     User findByEmail(String email);
 
     // 根据手机号查询用户，用于可能的验证、查找特定用户等场景
-    User findByPhoneNumber(String phoneNumber);
+    User findByPhone(String phoneNumber);
 
     // 查询所有启用状态（账号可用）的用户
 

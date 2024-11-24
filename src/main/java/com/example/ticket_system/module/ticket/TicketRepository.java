@@ -1,4 +1,4 @@
-package com.example.ticket_system.ticket;
+package com.example.ticket_system.module.ticket;
 
 import com.example.ticket_system.model.Seat;
 import org.springframework.data.jpa.repository.JpaRepository;

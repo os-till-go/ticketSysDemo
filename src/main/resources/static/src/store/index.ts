@@ -1,6 +1,9 @@
 import { reactive } from 'vue'
 import { Ticket, Seat, Order } from '../types'
-import { ticketApi, seatApi, orderApi } from '../api'
+import {ticketApi} from "../api/ticket";
+import {seatApi} from "../api/seat";
+import {orderApi} from "../api/order";
+import {userApi} from "../api/user";
 
 export const store = reactive({
     tickets: [] as Ticket[],

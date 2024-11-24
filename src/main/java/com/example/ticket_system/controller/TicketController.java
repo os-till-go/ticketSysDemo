@@ -1,7 +1,7 @@
-package com.example.ticket_system.Controller;
+package com.example.ticket_system.controller;
 
 import com.example.ticket_system.service.TicketService;
-import com.example.ticket_system.user.UserRepository;
+import com.example.ticket_system.module.user.UserRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

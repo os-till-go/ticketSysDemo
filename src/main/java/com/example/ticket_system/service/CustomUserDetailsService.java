@@ -1,11 +1,13 @@
 package com.example.ticket_system.service;
 
-import com.example.ticket_system.user.UserRepository;
+import com.example.ticket_system.module.user.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import com.example.ticket_system.model.User;
+
+import java.util.Optional;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
@@ -16,7 +18,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         this.userRepository = userRepository;
     }
 
-    @Override
+
 //    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 //        Optional<User> userOptional = Optional.ofNullable(userRepository.findByUsername(username));
 //        if (userOptional.isEmpty()) {
@@ -30,12 +32,14 @@ public class CustomUserDetailsService implements UserDetailsService {
 //                .roles("USER")
 //                .build();
 //    }
+    @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findByUsername(username);
-        if (user == null) {
+        Optional<User> userOptional = userRepository.findByUsername(username);
+        if (userOptional.isEmpty()) {
             throw new UsernameNotFoundException("用户名不存在");
         }
 
+        User user = userOptional.get();
         return org.springframework.security.core.userdetails.User
                 .withUsername(user.getUsername())
                 .password(user.getPassword())

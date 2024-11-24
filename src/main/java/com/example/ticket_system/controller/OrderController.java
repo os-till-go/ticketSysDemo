@@ -1,4 +1,4 @@
-package com.example.ticket_system.Controller;
+package com.example.ticket_system.controller;
 
 import com.example.ticket_system.model.Order;
 import com.example.ticket_system.service.OrderService;
