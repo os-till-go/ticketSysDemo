@@ -18,17 +18,29 @@ public class CustomUserDetailsService implements UserDetailsService {
     }
 
     @Override
+//    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//        Optional<User> userOptional = Optional.ofNullable(userRepository.findByUsername(username));
+//        if (userOptional.isEmpty()) {
+//            throw new UsernameNotFoundException("用户名不存在");
+//        }
+//        User user = userOptional.get();
+//        // 构建 UserDetails 对象，这里简单设置用户名、密码以及角色（示例中角色设为普通用户 "USER"）
+//        return org.springframework.security.core.userdetails.User
+//                .withUsername(user.getUsername())
+//                .password(user.getPassword())
+//                .roles("USER")
+//                .build();
+//    }
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Optional<User> userOptional = Optional.ofNullable(userRepository.findByUsername(username));
-        if (userOptional.isEmpty()) {
+        User user = userRepository.findByUsername(username);
+        if (user == null) {
             throw new UsernameNotFoundException("用户名不存在");
         }
-        User user = userOptional.get();
-        // 构建 UserDetails 对象，这里简单设置用户名、密码以及角色（示例中角色设为普通用户 "USER"）
+
         return org.springframework.security.core.userdetails.User
                 .withUsername(user.getUsername())
                 .password(user.getPassword())
-                .roles("USER")
+                .roles(user.getRoles().toArray(new String[0]))
                 .build();
     }
 }

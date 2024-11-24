@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit profile</title>
+    <link rel="stylesheet" th:href="@{/css/user-profile-edit.css}">
+</head>
+<body>
+    <form th:action="@{/user/profile/update}" method="post">
+        <div class="form-group">
+            <label for="username">用户名</label>
+            <input type="text" id="username" name="username" th:value="${user.username}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">邮箱</label>
+            <input type="email" id="email" name="email" th:value="${user.email}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="phone">联系电话</label>
+            <input type="text" id="phone" name="phone" th:value="${user.phone}" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">保存修改</button>
+    </form>
+</body>
+</html>

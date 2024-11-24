@@ -18,8 +18,15 @@ public class StatisticsService {
         this.ticketRepository = ticketRepository;
     }
 
+    public BigDecimal calculateSalesBetween(LocalDateTime startTime, LocalDateTime endTime) {
+        List<Order> orders = orderRepository.findByCreateTimeBetween(startTime, endTime);
+        // ... 其他代码 ...
+        return null;
+    }
+
     public BigDecimal calculateTotalSales(LocalDateTime start, LocalDateTime end) {
-        List<Order> orders = OrderRepository.findByPurchaseTimeBetween(start, end);  // 假设订单有购买时间字段
+        // 使用注入的orderRepository实例调用方法
+        List<Order> orders = orderRepository.findByCreateTimeBetween(start, end);
         BigDecimal totalSales = BigDecimal.ZERO;
         for (Order order : orders) {
             totalSales = totalSales.add(order.getTicket().getPrice());

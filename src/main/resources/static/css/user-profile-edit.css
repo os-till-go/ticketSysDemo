@@ -1,0 +1,10 @@
+.user-profile-edit form {
+    width: 400px;
+    margin: 0 auto;
+}
+.user-profile-edit input[type="text"],
+.user-profile-edit input[type="email"],
+.user-profile-edit input[type="password"] {
+    width: 100%;
+    margin-bottom: 15px;
+}

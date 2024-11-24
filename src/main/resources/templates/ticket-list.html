@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ticket List</title>
+    <link rel="stylesheet" th:href="@{/css/ticket-list.css}">
+
+</head>
+<body>
+    <div class="search-bar">
+        <input type="text" placeholder="搜索票务" class="form-control">
+        <button class="btn btn-secondary">搜索</button>
+    </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>票务编号</th>
+            <th>标题</th>
+            <th>状态</th>
+            <th>创建时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="ticket : ${tickets}">
+            <td th:text="${ticket.id}"></td>
+            <td th:text="${ticket.title}"></td>
+            <td th:text="${ticket.status}"></td>
+            <td th:text="${ticket.createTime}"></td>
+            <td>
+                <a th:href="@{/tickets/{id}(id=${ticket.id})}" class="btn btn-info">详情</a>
+                <a th:href="@{/tickets/{id}/edit(id=${ticket.id})}" class="btn btn-warning">编辑</a>
+                <a th:href="@{/tickets/{id}/delete(id=${ticket.id})}" class="btn btn-danger">删除</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

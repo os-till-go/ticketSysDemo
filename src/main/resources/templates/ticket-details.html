@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ticket details</title>
+    <link rel="stylesheet" th:href="@{/css/ticket-details.css}">
+</head>
+<body>
+    <div class="ticket-details">
+        <h2 th:text="${ticket.title}"></h2>
+        <p><strong>描述：</strong> <span th:text="${ticket.description}"></span></p>
+        <p><strong>相关人员：</strong> <span th:text="${ticket.assignedTo}"></span></p>
+        <p><strong>开始时间：</strong> <span th:text="${ticket.startTime}"></span></p>
+        <p><strong>结束时间：</strong> <span th:text="${ticket.endTime}"></span></p>
+        <a th:href="@{/tickets/list}" class="btn btn-secondary">返回票务列表</a>
+    </div>
+</body>
+</html>

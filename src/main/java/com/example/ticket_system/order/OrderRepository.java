@@ -10,10 +10,6 @@ import java.util.List;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
-    static List<Order> findByPurchaseTimeBetween(LocalDateTime start, LocalDateTime end) {
-        return null;//TODO
-    }
-
     // 根据用户查询其所有订单，由Spring Data JPA根据方法名自动生成查询语句
     List<Order> findByUser(User user);
 
@@ -26,7 +22,7 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
 
     // 查询某个时间段内创建的订单
     @Query("SELECT o FROM Order o WHERE o.createTime BETWEEN :startTime AND :endTime")
-    List<Order> findByCreateTimeBetween(@Param("startTime") LocalDateTime startTime, @Param("endTime") LocalDateTime endTime);
+    List<Order> findByCreateTimeBetween(LocalDateTime startTime, LocalDateTime endTime);
 
     // 查询某个用户在特定时间段内创建的订单
     @Query("SELECT o FROM Order o WHERE o.user.id = :userId AND o.createTime BETWEEN :startTime AND :endTime")

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}">
+    <script src="../static/js/dashboard.js"></script>
+</head>
+<body>
+    <nav class="sidebar">
+        <ul>
+            <li><a th:href="@{/tickets/list}">ticketList</a></li>
+            <li><a th:href="@{/user/profile/edit}">修改个人资料</a></li>
+        </ul>
+    </nav>
+
+    <button th:href="@{/tickets/create}" class="btn btn-success">创建新票务</button>
+</body>
+</html>

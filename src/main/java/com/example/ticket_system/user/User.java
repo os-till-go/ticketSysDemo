@@ -3,10 +3,13 @@ package com.example.ticket_system.user;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Entity
 @Data
+@Table(name = "users")  // 将 "user" 改为 "users"
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,4 +30,9 @@ public class User {
         registerTime = LocalDateTime.now();
         enabled = true; // 默认为账号可用状态
     }
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
+    @Column(name = "role")
+    private Set<String> roles = new HashSet<>();
 }
