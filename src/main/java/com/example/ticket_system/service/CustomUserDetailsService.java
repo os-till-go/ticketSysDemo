@@ -1,12 +1,11 @@
-package com.example.ticket_system.user;
+package com.example.ticket_system.service;
 
+import com.example.ticket_system.user.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import com.example.ticket_system.user.User;
-import com.example.ticket_system.user.UserRepository;
-import java.util.Optional;
+import com.example.ticket_system.model.User;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {

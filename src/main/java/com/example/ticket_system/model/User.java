@@ -1,4 +1,4 @@
-package com.example.ticket_system.user;
+package com.example.ticket_system.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

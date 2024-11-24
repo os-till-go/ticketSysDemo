@@ -1,12 +1,10 @@
-package com.example.ticket_system.order;
+package com.example.ticket_system.model;
 
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import lombok.Data;
-import com.example.ticket_system.user.User;
-import com.example.ticket_system.ticket.Ticket;
 
 @Entity
 @Data

@@ -1,6 +1,5 @@
-package com.example.ticket_system.ticket;
+package com.example.ticket_system.model;
 
-import com.example.ticket_system.seat.Seat;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -8,7 +7,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.Data;
-import lombok.Generated;
 
 @Entity
 @Data

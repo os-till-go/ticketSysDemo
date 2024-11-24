@@ -1,17 +1,14 @@
-package com.example.ticket_system.ticket;
+package com.example.ticket_system.Controller;
 
+import com.example.ticket_system.service.TicketService;
 import com.example.ticket_system.user.UserRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.example.ticket_system.order.Order;
-import com.example.ticket_system.ticket.Ticket;
-import com.example.ticket_system.user.User;
-import com.example.ticket_system.user.UserRepository;
-import com.example.ticket_system.order.Order;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import com.example.ticket_system.model.Order;
+import com.example.ticket_system.model.Ticket;
+import com.example.ticket_system.model.User;
+
 import java.time.LocalDateTime;
 import java.util.List;
 

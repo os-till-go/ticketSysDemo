@@ -1,4 +1,4 @@
-package com.example.ticket_system.seat;
+package com.example.ticket_system.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,7 +6,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.Data;
-import com.example.ticket_system.ticket.Ticket;
 
 @Entity
 @Data

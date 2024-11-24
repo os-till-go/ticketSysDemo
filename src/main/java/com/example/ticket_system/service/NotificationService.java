@@ -1,7 +1,7 @@
-package com.example.ticket_system.notification;
+package com.example.ticket_system.service;
 
 import org.springframework.stereotype.Service;
-import com.example.ticket_system.order.Order;
+import com.example.ticket_system.model.Order;
 @Service
 public class NotificationService {
     public void notifyPurchaseResult(Order order, boolean success) {

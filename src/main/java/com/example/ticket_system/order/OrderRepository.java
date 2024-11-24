@@ -3,8 +3,8 @@ package com.example.ticket_system.order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import com.example.ticket_system.order.Order;
-import com.example.ticket_system.user.User;
+import com.example.ticket_system.model.Order;
+import com.example.ticket_system.model.User;
 import java.time.LocalDateTime;
 import java.util.List;
 

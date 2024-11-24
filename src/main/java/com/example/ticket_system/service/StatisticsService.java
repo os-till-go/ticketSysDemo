@@ -1,6 +1,6 @@
-package com.example.ticket_system.statistics;
+package com.example.ticket_system.service;
 
-import com.example.ticket_system.order.Order;
+import com.example.ticket_system.model.Order;
 import org.springframework.stereotype.Service;
 import com.example.ticket_system.order.OrderRepository;
 import com.example.ticket_system.ticket.TicketRepository;

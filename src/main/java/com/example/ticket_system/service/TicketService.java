@@ -1,12 +1,12 @@
-package com.example.ticket_system.ticket;
+package com.example.ticket_system.service;
 
+import com.example.ticket_system.ticket.TicketRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.example.ticket_system.order.Order;
+import com.example.ticket_system.model.Order;
 import com.example.ticket_system.order.OrderRepository;
-import com.example.ticket_system.ticket.Ticket;
-import com.example.ticket_system.ticket.TicketRepository;
-import com.example.ticket_system.user.User;
+import com.example.ticket_system.model.Ticket;
+import com.example.ticket_system.model.User;
 import com.example.ticket_system.user.UserRepository;
 
 import java.time.LocalDateTime;

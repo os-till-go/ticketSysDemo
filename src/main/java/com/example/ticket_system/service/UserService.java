@@ -1,10 +1,11 @@
-package com.example.ticket_system.user;
+package com.example.ticket_system.service;
 
+import com.example.ticket_system.user.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.example.ticket_system.user.User;
-import com.example.ticket_system.user.UserRepository;
+import com.example.ticket_system.model.User;
+
 import java.util.Optional;
 
 @Service

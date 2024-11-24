@@ -1,4 +1,4 @@
-package com.example.ticket_system.user;
+package com.example.ticket_system.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

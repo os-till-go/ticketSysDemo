@@ -3,7 +3,7 @@ package com.example.ticket_system.user;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import com.example.ticket_system.user.User;
+import com.example.ticket_system.model.User;
 import java.util.List;
 
 public interface UserRepository extends JpaRepository<User, Long> {

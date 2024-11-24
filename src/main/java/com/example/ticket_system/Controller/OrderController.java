@@ -1,9 +1,11 @@
-package com.example.ticket_system.order;
+package com.example.ticket_system.Controller;
 
+import com.example.ticket_system.model.Order;
+import com.example.ticket_system.service.OrderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.example.ticket_system.user.User;
+import com.example.ticket_system.model.User;
 import java.util.List;
 
 @RestController

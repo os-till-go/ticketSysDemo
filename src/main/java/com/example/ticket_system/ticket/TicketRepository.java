@@ -1,10 +1,10 @@
 package com.example.ticket_system.ticket;
 
-import com.example.ticket_system.seat.Seat;
+import com.example.ticket_system.model.Seat;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import com.example.ticket_system.ticket.Ticket;
+import com.example.ticket_system.model.Ticket;
 import java.time.LocalDateTime;
 import java.util.List;
 
